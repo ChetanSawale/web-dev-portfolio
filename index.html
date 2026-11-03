@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chetan Sawale — Full-Stack Web Developer</title>
+<meta name="description" content="Chetan Sawale — Full-Stack Web Developer from Mumbai. React, Node.js, PHP, AI-powered apps. 8 web projects, 2 live apps.">
+<meta property="og:title" content="Chetan Sawale — Full-Stack Web Developer">
+<meta property="og:description" content="I build fast, colourful, working web apps — React, Node.js, PHP, AI. See the live projects.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237C3AED'/><text x='50' y='68' font-size='56' font-family='Arial' font-weight='bold' fill='%23C6FF00' text-anchor='middle'>C</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Custom cursor glow (desktop only) -->
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="pre-inner">
+    <div class="pre-name">CHETAN<span>SAWALE</span></div>
+    <div class="pre-bar"><span id="preBar"></span></div>
+    <div class="pre-pct" id="prePct">0%</div>
+  </div>
+</div>
+
+<!-- Floating orbs -->
+<div class="orb orb-1" aria-hidden="true"></div>
+<div class="orb orb-2" aria-hidden="true"></div>
+<div class="orb orb-3" aria-hidden="true"></div>
+
+<!-- Nav -->
+<header class="nav" id="nav">
+  <a href="#top" class="logo">CS<span>.</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Journey</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-cta">
+    <a class="btn btn-small btn-lime magnetic" href="assets/Chetan-Sawale-Web-Developer-Resume.pdf" download>Resume ↓</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <canvas id="webgl" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <p class="hero-eyebrow reveal"><span class="dot"></span> Available for web developer roles · Mumbai, India</p>
+      <h1 class="hero-title">
+        <span class="line line-1">CHETAN</span>
+        <span class="line line-2">SAWALE<span class="fullstop">.</span></span>
+      </h1>
+      <p class="hero-sub reveal">Full-Stack Web Developer — I turn ideas into <em>fast, colourful, working</em> web apps with React, Node.js, PHP &amp; AI.</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-pink magnetic" href="#projects">See live projects →</a>
+        <a class="btn btn-ghost magnetic" href="assets/Chetan-Sawale-Web-Developer-Resume.pdf" download>Download resume</a>
+      </div>
+      <div class="hero-links reveal">
+        <a href="https://github.com/ChetanSawale" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/chetan-sawale-0a3917321" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="mailto:sawalechetan102@gmail.com">sawalechetan102@gmail.com</a>
+      </div>
+    </div>
+    <div class="badge-rotate" aria-hidden="true">
+      <svg viewBox="0 0 200 200">
+        <defs><path id="circlePath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+        <text><textPath href="#circlePath">FULL-STACK DEVELOPER • REACT • NODE • PHP • AI • </textPath></text>
+      </svg>
+      <span class="badge-star">✦</span>
+    </div>
+    <a class="scroll-hint" href="#about">Scroll ↓</a>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>REACT ✦ NODE.JS ✦ PHP ✦ MONGODB ✦ REST APIS ✦ RAG &amp; LLMS ✦ WEBSOCKETS ✦ JWT ✦ FIGMA ✦&nbsp;</span>
+      <span>REACT ✦ NODE.JS ✦ PHP ✦ MONGODB ✦ REST APIS ✦ RAG &amp; LLMS ✦ WEBSOCKETS ✦ JWT ✦ FIGMA ✦&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <h2 class="section-title reveal">About <span>me</span></h2>
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <div class="photo-frame">
+          <img src="assets/me.png" alt="Portrait of Chetan Sawale">
+          <span class="photo-tag">Mumbai · India</span>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <p class="lead">I'm Chetan — a B.Tech Computer Engineering graduate who builds web products end to end: frontend, backend, database, deploy.</p>
+        <p>By day I work as a Reports Executive at Hitachi Cash Management Services, cleaning, validating and reporting transaction data in Excel and building Power BI dashboards that show how the locations I handle are performing. By night I ship web apps — a paper-trading platform that's live on its own domain, an AI assistant with long-term memory, and full-stack apps with real auth, APIs and CI/CD.</p>
+        <p>I care about things that actually work: real users, real data, real deployments — not screenshots of demos.</p>
+        <ul class="about-facts">
+          <li><strong>B.Tech</strong> Computer Engineering, University of Mumbai — St John College, 2022–2026 · CGPA 7.6</li>
+          <li><strong>Diploma</strong> Mechanical Engineering — 80%</li>
+          <li><strong>Languages</strong> English (Advanced) · Hindi (Advanced) · Marathi (Native)</li>
+          <li><strong>Certifications</strong> AI-Powered Cohort – Web Development · Python Programming – Udemy · Blockchain Bootcamp – Block Intelligence</li>
+        </ul>
+        <div class="stats">
+          <div class="stat"><span class="stat-num" data-count="8">0</span><span class="stat-label">web projects</span></div>
+          <div class="stat"><span class="stat-num" data-count="2">0</span><span class="stat-label">live apps</span></div>
+          <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label">hackathon / cert builds</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section skills" id="skills">
+    <h2 class="section-title reveal">What I <span>build with</span></h2>
+    <p class="section-sub reveal">Honest skills only — everything here is something I've actually used in a project.</p>
+    <div class="skill-groups">
+
+      <div class="skill-card reveal" style="--accent:#7C3AED">
+        <h3>Frontend</h3>
+        <ul class="chips"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>React.js</li><li>SCSS</li><li>Responsive Web Design</li><li>Figma</li></ul>
+        <div class="bar"><span style="--w:92%"></span></div>
+      </div>
+
+      <div class="skill-card reveal" style="--accent:#FF2E88">
+        <h3>Backend</h3>
+        <ul class="chips"><li>PHP</li><li>Node.js</li><li>Express.js</li><li>REST APIs</li><li>JWT</li><li>WebSockets</li></ul>
+        <div class="bar"><span style="--w:88%"></span></div>
+      </div>
+
+      <div class="skill-card reveal" style="--accent:#FF6B1A">
+        <h3>Databases</h3>
+        <ul class="chips"><li>MongoDB</li><li>MySQL</li><li>Pinecone</li></ul>
+        <div class="bar"><span style="--w:84%"></span></div>
+      </div>
+
+      <div class="skill-card reveal" style="--accent:#00E5FF">
+        <h3>Programming</h3>
+        <ul class="chips"><li>JavaScript</li><li>PHP</li><li>Python</li></ul>
+        <div class="bar"><span style="--w:86%"></span></div>
+      </div>
+
+      <div class="skill-card reveal" style="--accent:#C6FF00">
+        <h3>AI &amp; NLP</h3>
+        <ul class="chips"><li>RAG</li><li>LLMs</li><li>Embeddings</li><li>Prompt Engineering</li></ul>
+        <div class="bar"><span style="--w:82%"></span></div>
+      </div>
+
+      <div class="skill-card reveal" style="--accent:#FF2E88">
+        <h3>Tools</h3>
+        <ul class="chips"><li>Git</li><li>GitHub</li><li>Postman</li><li>VS Code</li><li>Render</li></ul>
+        <div class="bar"><span style="--w:90%"></span></div>
+      </div>
+
+      <div class="skill-card skill-card-wide reveal" style="--accent:#7C3AED">
+        <h3>Working knowledge <span class="wk-tag">learning / hands-on</span></h3>
+        <ul class="chips chips-soft"><li>Linux</li><li>Docker</li><li>Jenkins CI/CD</li><li>Bash</li><li>AWS</li><li>Prometheus</li><li>Grafana</li></ul>
+        <p class="wk-note">Used in my DevOps homelab and CI/CD practice — not claimed as core web skills.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section projects" id="projects">
+    <h2 class="section-title reveal">Selected <span>work</span></h2>
+    <p class="section-sub reveal">Eight projects. Two live right now — open them, click around, break things.</p>
+
+    <div class="filters reveal" role="group" aria-label="Filter projects">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="fullstack">Full-Stack</button>
+      <button class="filter" data-filter="frontend">Frontend</button>
+      <button class="filter" data-filter="ai">AI</button>
+    </div>
+
+    <div class="project-grid" id="projectGrid">
+
+      <!-- PaperBull — FEATURED -->
+      <article class="project featured tilt" data-cat="fullstack" style="--g:linear-gradient(135deg,#0B0F14,#10B981 55%,#34D399)">
+        <div class="project-media"><img src="assets/paperbull-preview.png" alt="PaperBull paper-trading app preview" loading="lazy"></div>
+        <div class="project-body">
+          <div class="project-top"><span class="badge-live">● LIVE</span><span class="badge-feat">Featured</span></div>
+          <h3>PaperBull</h3>
+          <p>Paper-trading app — practise trading with virtual money, real market feel. Fastify backend + React/Vite frontend, Postgres, Docker Compose, deployed on Render with its own domain.</p>
+          <ul class="tags"><li>React</li><li>Fastify</li><li>PostgreSQL</li><li>Docker</li><li>Render</li></ul>
+          <div class="project-links">
+            <a class="btn btn-lime btn-small magnetic" href="https://paperbull.online" target="_blank" rel="noopener">Visit live ↗</a>
+            <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/Traders_app" target="_blank" rel="noopener">Repo ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- AsuraGPT — FEATURED -->
+      <article class="project featured tilt" data-cat="ai fullstack" style="--g:linear-gradient(135deg,#7C3AED,#FF2E88)">
+        <div class="project-media project-media-gradient"><span class="media-big">AsuraGPT</span><span class="media-sub">Conversational AI · long-term memory</span></div>
+        <div class="project-body">
+          <div class="project-top"><span class="badge-live">● LIVE</span><span class="badge-feat">Featured</span></div>
+          <h3>AsuraGPT</h3>
+          <p>Conversational AI assistant with long-term memory — RAG over Pinecone with embeddings, Node.js/Express backend, MongoDB, real-time chat over WebSockets.</p>
+          <p class="wake-note">Render free tier — may take a moment to wake.</p>
+          <ul class="tags"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Pinecone</li><li>RAG</li><li>WebSockets</li></ul>
+          <div class="project-links">
+            <a class="btn btn-lime btn-small magnetic" href="https://asuragpt-2.onrender.com" target="_blank" rel="noopener">Visit live ↗</a>
+            <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/AsuraGPT" target="_blank" rel="noopener">Repo ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Hotel Booking -->
+      <article class="project tilt" data-cat="fullstack" style="--g:linear-gradient(135deg,#FF6B1A,#FF2E88)">
+        <div class="project-media project-media-gradient"><span class="media-big">Hotel Booking</span><span class="media-sub">Rooms · bookings · auth</span></div>
+        <div class="project-body">
+          <h3>Hotel Booking Web Application</h3>
+          <p>Full-stack hotel booking app — React frontend, Node/Express + MongoDB backend, JWT auth, REST APIs for users, hotels, rooms and bookings, responsive UI.</p>
+          <ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>JWT</li></ul>
+          <div class="project-links">
+            <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/Hotel_Booking_Web-Frist-Devops-Application-" target="_blank" rel="noopener">Repo ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Student Task Manager -->
+      <article class="project tilt" data-cat="fullstack" style="--g:linear-gradient(135deg,#00E5FF,#7C3AED)">
+        <div class="project-media project-media-gradient"><span class="media-big">Task Manager</span><span class="media-sub">Docker · Jenkins CI/CD</span></div>
+        <div class="project-body">
+          <h3>Student Task Manager</h3>
+          <p>Full-stack task manager with Docker builds and pushes for backend + frontend images, driven by a Jenkins declarative CI/CD pipeline.</p>
+          <ul class="tags"><li>Node.js</li><li>Docker</li><li>Jenkins</li><li>CI/CD</li></ul>
+          <div class="project-links">
+            <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/student_task_manager_devpro" target="_blank" rel="noopener">Repo ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- EkSudhaar -->
+      <article class="project tilt" data-cat="frontend" style="--g:linear-gradient(135deg,#C6FF00,#00E5FF)">
+        <div class="project-media project-media-gradient"><span class="media-big">EkSudhaar</span><span class="media-sub">Civic tech · Code for India</span></div>
+        <div class="project-body">
+          <h3>EkSudhaar</h3>
+          <p>Civic-tech tool for the Code for India hackathon — a free pre-filing simulator that scores identity-correction applications 0–100% against a 28-rule knowledge base, before anyone pays a form-fill fee.</p>
+          <ul class="tags"><li>JavaScript</li><li>Hackathon</li><li>Civic Tech</li></ul>
+          <div class="project-links">
+            <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/eksudhaar" target="_blank" rel="noopener">Repo ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- AIVOA RCA -->
+      <article class="project tilt" data-cat="ai fullstack" style="--g:linear-gradient(135deg,#FF2E88,#7C3AED)">
+        <div class="project-media project-media-gradient"><span class="media-big">AIVOA RCA</span><span class="media-sub">Pharma · root cause analysis</span></div>
+        <div class="project-body">
+          <h3>AIVOA RCA Module</h3>
+          <p>AI Root Cause Analysis module for pharma API manufacturing — React + TypeScript frontend, FastAPI backend, deviation intake, Ishikawa + 5 Whys analysis, CAPA recommendations.</p>
+          <ul class="tags"><li>React</li><li>TypeScript</li><li>FastAPI</li><li>AI</li></ul>
+          <div class="project-links">
+            <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/aivoa-rca-module" target="_blank" rel="noopener">Repo ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Carpooling -->
+      <article class="project tilt" data-cat="fullstack" style="--g:linear-gradient(135deg,#FF6B1A,#C6FF00)">
+        <div class="project-media project-media-gradient"><span class="media-big">Carpooling</span><span class="media-sub">Ride-sharing platform</span></div>
+        <div class="project-body">
+          <h3>Carpooling Website</h3>
+          <p>Ride-sharing platform — HTML/CSS/JavaScript frontend with an Express.js + MongoDB backend for rides, users and bookings.</p>
+          <ul class="tags"><li>HTML/CSS/JS</li><li>Express.js</li><li>MongoDB</li></ul>
+        </div>
+      </article>
+
+      <!-- PromptVault -->
+      <article class="project tilt" data-cat="ai frontend" style="--g:linear-gradient(135deg,#00E5FF,#C6FF00)">
+        <div class="project-media project-media-gradient"><span class="media-big">PromptVault</span><span class="media-sub">Prompt management</span></div>
+        <div class="project-body">
+          <h3>PromptVault</h3>
+          <p>AI-powered prompt management app for storing, organising and reusing prompts — built to make everyday LLM work faster.</p>
+          <ul class="tags"><li>JavaScript</li><li>AI</li><li>Prompt Engineering</li></ul>
+        </div>
+      </article>
+
+    </div>
+    <p class="more-note reveal">More on GitHub — <a href="https://github.com/ChetanSawale" target="_blank" rel="noopener">github.com/ChetanSawale ↗</a></p>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section experience" id="experience">
+    <h2 class="section-title reveal">The <span>journey</span></h2>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <span class="tl-dot" style="--c:#FF2E88"></span>
+        <div class="tl-card">
+          <span class="tl-date">May 2026 — Present</span>
+          <h3>Reports Executive — Hitachi Cash Management Services</h3>
+          <p>Cleaning, validating and reporting transaction data in Excel; building Power BI dashboards that show the performance of the locations I handle.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-dot" style="--c:#C6FF00"></span>
+        <div class="tl-card">
+          <span class="tl-date">2026</span>
+          <h3>Hackathons — Code for India · Amazon 'Build, Ship, Shape'</h3>
+          <p>EkSudhaar (Code for India 'Code for a Billion') and the DevOps MCP server for Amazon's 'Build, Ship, Shape' hackathon — building real, working products under deadline.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-dot" style="--c:#00E5FF"></span>
+        <div class="tl-card">
+          <span class="tl-date">May 2022 — May 2026</span>
+          <h3>B.Tech, Computer Engineering — University of Mumbai</h3>
+          <p>St John College of Engineering and Management · CGPA 7.6. Diploma in Mechanical Engineering — 80%.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <h2 class="contact-title reveal">Let's build<br><span>something real.</span></h2>
+    <p class="section-sub reveal">Hiring for a web developer role? My inbox is open — and my code is already live.</p>
+    <a class="big-email magnetic reveal" href="mailto:sawalechetan102@gmail.com">sawalechetan102@gmail.com</a>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <p><strong>Phone</strong><br><a href="tel:+919699486717">+91 96994 86717</a></p>
+        <p><strong>Location</strong><br>Mumbai, India — open to relocation across India</p>
+        <p><strong>Elsewhere</strong><br>
+          <a href="https://github.com/ChetanSawale" target="_blank" rel="noopener">GitHub ↗</a> ·
+          <a href="https://www.linkedin.com/in/chetan-sawale-0a3917321" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </p>
+        <a class="btn btn-lime magnetic" href="assets/Chetan-Sawale-Web-Developer-Resume.pdf" download>Download resume ↓</a>
+        <div class="lottie-wrap" id="lottieWrap" aria-hidden="true"></div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <label>Your name<input type="text" id="cfName" required placeholder="Jane Recruiter"></label>
+        <label>Your email<input type="email" id="cfEmail" required placeholder="jane@company.com"></label>
+        <label>Message<textarea id="cfMsg" rows="4" required placeholder="Hi Chetan, we'd like to talk about a web developer role…"></textarea></label>
+        <button class="btn btn-pink magnetic" type="submit">Send via email →</button>
+        <p class="form-note">Opens your email app — no data is stored anywhere.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Chetan Sawale · Built with HTML, CSS &amp; JavaScript — GSAP, Three.js &amp; Lenis, no build step.</p>
+  <p class="footer-sub">Mumbai, India · <a href="#top">Back to top ↑</a></p>
+</footer>
+
+<!-- Animation libraries (CDN, all optional — the site works fully without them) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
