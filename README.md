@@ -1,16 +1,21 @@
 # Chetan Sawale — Web Developer Portfolio
 
-Awwwards-inspired, vibrant, animated static portfolio. Vanilla HTML/CSS/JS —
-no build step, no framework — so it deploys as a Render Static Site.
+Awwwards-inspired, loud black / off-white / signal-red portfolio, in the
+spirit of unbelievablycrap.com. Vanilla HTML/CSS/JS — no build step, no
+framework — so it deploys as a Render Static Site.
 
 ## Structure
 
 ```
 web-dev-portfolio/
 ├── index.html          # hero, about, skills, projects, journey, contact
-├── css/style.css       # all styles (ink/violet/pink/orange/lime/cyan palette)
-├── js/main.js          # preloader, scroll-reveal, counters, filters, tilt,
-│                       # cursor glow, magnetic buttons, mailto form
+├── css/style.css       # all styles (near-black / off-white / signal-red palette)
+├── js/main.js          # preloader, transform-only reveals, counters, project
+│                       # slider + filters + lightbox, IST clock, mouse coords,
+│                       # GSAP parallax, Lenis, Three.js (red/white), mailto form
+│                       # VISIBILITY RULE: content is visible by default; a
+│                       # 1200ms safety timer forces .in on everything, so no
+│                       # card or heading can ever be stuck invisible.
 ├── assets/
 │   ├── me.png                              # portrait
 │   ├── paperbull-preview.png               # PaperBull screenshot

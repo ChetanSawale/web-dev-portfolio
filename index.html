@@ -6,79 +6,83 @@
 <title>Chetan Sawale — Full-Stack Web Developer</title>
 <meta name="description" content="Chetan Sawale — Full-Stack Web Developer from Mumbai. React, Node.js, PHP, AI-powered apps. 8 web projects, 2 live apps.">
 <meta property="og:title" content="Chetan Sawale — Full-Stack Web Developer">
-<meta property="og:description" content="I build fast, colourful, working web apps — React, Node.js, PHP, AI. See the live projects.">
+<meta property="og:description" content="I build fast, working web apps — React, Node.js, PHP, AI. See the live projects.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237C3AED'/><text x='50' y='68' font-size='56' font-family='Arial' font-weight='bold' fill='%23C6FF00' text-anchor='middle'>C</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23FF2B2B'/><text x='50' y='72' font-size='58' font-family='Arial' font-weight='bold' fill='%230A0A0A' text-anchor='middle'>C</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- Custom cursor glow (desktop only) -->
-<div class="cursor" id="cursor" aria-hidden="true"></div>
-
-<!-- Preloader -->
+<!-- Preloader: fast, skippable, max ~900ms -->
 <div class="preloader" id="preloader" aria-hidden="true">
   <div class="pre-inner">
-    <div class="pre-name">CHETAN<span>SAWALE</span></div>
+    <p class="pre-file mono">CASE FILE // CHETAN SAWALE</p>
+    <div class="pre-name">LOADING<span>WORK</span></div>
     <div class="pre-bar"><span id="preBar"></span></div>
-    <div class="pre-pct" id="prePct">0%</div>
+    <div class="pre-pct mono" id="prePct">0%</div>
   </div>
 </div>
 
-<!-- Floating orbs -->
-<div class="orb orb-1" aria-hidden="true"></div>
-<div class="orb orb-2" aria-hidden="true"></div>
-<div class="orb orb-3" aria-hidden="true"></div>
-
-<!-- Nav -->
-<header class="nav" id="nav">
-  <a href="#top" class="logo">CS<span>.</span></a>
-  <nav class="nav-links" id="navLinks">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Journey</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <div class="nav-cta">
-    <a class="btn btn-small btn-lime magnetic" href="assets/Chetan-Sawale-Web-Developer-Resume.pdf" download>Resume ↓</a>
-    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  </div>
-</header>
-
 <main id="top">
 
-  <!-- ============ HERO ============ -->
-  <section class="hero">
+  <!-- ============ HERO / HUD ============ -->
+  <section class="hero" id="hero">
     <canvas id="webgl" aria-hidden="true"></canvas>
+    <div class="hud-top">
+      <a href="#top" class="hud-logo">CHETAN SAWALE</a>
+      <p class="hud-right mono">FULL-STACK DEVELOPER // MUMBAI, INDIA<br><span id="istClock">--:--:-- IST</span></p>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="nav-links mono" id="navLinks">
+      <a href="#about">CASE FILE</a>
+      <a href="#projects">WORK</a>
+      <a href="#skills">DOSSIER</a>
+      <a href="#experience">JOURNEY</a>
+      <a href="#contact">CONTACT</a>
+      <a href="assets/Chetan-Sawale-Web-Developer-Resume.pdf" download>RESUME ↓</a>
+    </nav>
+    <div class="hud-side hud-side-left mono" aria-hidden="true">SUBJECT: FULL-STACK DEVELOPER — FILE 001 — MUMBAI</div>
+    <div class="hud-side hud-side-right mono" aria-hidden="true">STATUS: OPEN TO WORK — 2 LIVE APPS — 8 PROJECTS</div>
+
     <div class="hero-inner">
-      <p class="hero-eyebrow reveal"><span class="dot"></span> Available for web developer roles · Mumbai, India</p>
-      <h1 class="hero-title">
-        <span class="line line-1">CHETAN</span>
-        <span class="line line-2">SAWALE<span class="fullstop">.</span></span>
-      </h1>
-      <p class="hero-sub reveal">Full-Stack Web Developer — I turn ideas into <em>fast, colourful, working</em> web apps with React, Node.js, PHP &amp; AI.</p>
-      <div class="hero-cta reveal">
-        <a class="btn btn-pink magnetic" href="#projects">See live projects →</a>
-        <a class="btn btn-ghost magnetic" href="assets/Chetan-Sawale-Web-Developer-Resume.pdf" download>Download resume</a>
+      <div class="hero-photo">
+        <div class="photo-glitch" aria-label="Portrait of Chetan Sawale">
+          <img class="glitch-base" src="assets/me.png" alt="Portrait of Chetan Sawale">
+          <img class="glitch-layer glitch-r" src="assets/me.png" alt="" aria-hidden="true">
+          <img class="glitch-layer glitch-c" src="assets/me.png" alt="" aria-hidden="true">
+          <span class="halftone" aria-hidden="true"></span>
+          <span class="scanlines" aria-hidden="true"></span>
+          <span class="photo-tag mono">SUBJECT 001 — MUMBAI, IN</span>
+        </div>
       </div>
-      <div class="hero-links reveal">
-        <a href="https://github.com/ChetanSawale" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/chetan-sawale-0a3917321" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="mailto:sawalechetan102@gmail.com">sawalechetan102@gmail.com</a>
+      <div class="hero-text">
+        <p class="hero-eyebrow mono reveal"><span class="dot"></span> AVAILABLE FOR WEB DEVELOPER ROLES</p>
+        <h1 class="hero-title">
+          <span class="line line-1">CHETAN</span>
+          <span class="line line-2">SAWALE<span class="fullstop">.</span></span>
+        </h1>
+        <p class="hero-sub reveal">FULL-STACK WEB DEVELOPER — I TURN IDEAS INTO <em>FAST, WORKING</em> WEB APPS WITH REACT, NODE.JS, PHP &amp; AI. REAL USERS. REAL DATA. REAL DEPLOYMENTS.</p>
+        <div class="hero-cta reveal">
+          <a class="btn btn-red" href="#projects">SEE THE WORK →</a>
+          <a class="btn btn-ghost" href="assets/Chetan-Sawale-Web-Developer-Resume.pdf" download>DOWNLOAD RESUME</a>
+        </div>
+        <div class="hero-links mono reveal">
+          <a href="https://github.com/ChetanSawale" target="_blank" rel="noopener">GITHUB ↗</a>
+          <a href="https://www.linkedin.com/in/chetan-sawale-0a3917321" target="_blank" rel="noopener">LINKEDIN ↗</a>
+          <a href="mailto:sawalechetan102@gmail.com">SAWALEChetan102@GMAIL.COM</a>
+        </div>
       </div>
     </div>
-    <div class="badge-rotate" aria-hidden="true">
-      <svg viewBox="0 0 200 200">
-        <defs><path id="circlePath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
-        <text><textPath href="#circlePath">FULL-STACK DEVELOPER • REACT • NODE • PHP • AI • </textPath></text>
-      </svg>
-      <span class="badge-star">✦</span>
+
+    <div class="hud-bottom mono">
+      <span>MUMBAI 19.0760° N, 72.8777° E</span>
+      <span class="hud-warn">⚠ WARNING: THIS PORTFOLIO IS LOUD</span>
+      <span>X <span id="coordX">000</span> / Y <span id="coordY">000</span></span>
     </div>
-    <a class="scroll-hint" href="#about">Scroll ↓</a>
+    <a class="scroll-hint mono" href="#about">SCROLL ↓</a>
   </section>
 
   <!-- Marquee -->
@@ -89,260 +93,220 @@
     </div>
   </div>
 
-  <!-- ============ ABOUT ============ -->
-  <section class="section about" id="about">
-    <h2 class="section-title reveal">About <span>me</span></h2>
-    <div class="about-grid">
-      <div class="about-photo reveal">
-        <div class="photo-frame">
-          <img src="assets/me.png" alt="Portrait of Chetan Sawale">
-          <span class="photo-tag">Mumbai · India</span>
-        </div>
+  <!-- ============ CASE FILE / MANIFESTO ============ -->
+  <section class="section manifesto" id="about">
+    <p class="section-kicker mono reveal">CASE FILE: THE MAN BEHIND THE WORK</p>
+    <h2 class="section-title reveal">HE WASN'T<br>LOOKING FOR<br><span>A SAFE ANSWER.</span></h2>
+    <div class="manifesto-grid">
+      <div class="manifesto-col mono reveal">
+        <p>THE FIRST MISTAKE WAS ASSUMING CHETAN WAS LOOKING FOR A DEMO.</p>
+        <p>HE WASN'T. HE WAS LOOKING FOR SOMETHING THAT ACTUALLY WORKS — A PAPER-TRADING PLATFORM LIVE ON ITS OWN DOMAIN. AN AI ASSISTANT THAT REMEMBERS. FULL-STACK APPS WITH REAL AUTH, REAL APIS AND REAL CI/CD.</p>
+        <p>BY DAY, REPORTS EXECUTIVE AT HITACHI CASH MANAGEMENT SERVICES: CLEANING, VALIDATING AND REPORTING TRANSACTION DATA IN EXCEL, BUILDING POWER BI DASHBOARDS THAT SHOW HOW THE LOCATIONS HE HANDLES ARE PERFORMING.</p>
+        <p>BY NIGHT, SHIPPING. FRONTEND, BACKEND, DATABASE, DEPLOY. END TO END.</p>
       </div>
-      <div class="about-text reveal">
-        <p class="lead">I'm Chetan — a B.Tech Computer Engineering graduate who builds web products end to end: frontend, backend, database, deploy.</p>
-        <p>By day I work as a Reports Executive at Hitachi Cash Management Services, cleaning, validating and reporting transaction data in Excel and building Power BI dashboards that show how the locations I handle are performing. By night I ship web apps — a paper-trading platform that's live on its own domain, an AI assistant with long-term memory, and full-stack apps with real auth, APIs and CI/CD.</p>
-        <p>I care about things that actually work: real users, real data, real deployments — not screenshots of demos.</p>
-        <ul class="about-facts">
-          <li><strong>B.Tech</strong> Computer Engineering, University of Mumbai — St John College, 2022–2026 · CGPA 7.6</li>
-          <li><strong>Diploma</strong> Mechanical Engineering — 80%</li>
-          <li><strong>Languages</strong> English (Advanced) · Hindi (Advanced) · Marathi (Native)</li>
-          <li><strong>Certifications</strong> AI-Powered Cohort – Web Development · Python Programming – Udemy · Blockchain Bootcamp – Block Intelligence</li>
+      <div class="manifesto-col mono reveal">
+        <p>HE CARES ABOUT THINGS THAT SURVIVE THE FIRST IMPRESSION: REAL USERS, REAL DATA, REAL DEPLOYMENTS — NOT SCREENSHOTS OF DEMOS.</p>
+        <p>THE OBVIOUS ANSWER HAD USUALLY BEEN DONE BEFORE. HE PREFERRED THE ONE THAT MADE SOMEONE STOP AND LOOK AGAIN.</p>
+        <p>THAT WAS USUALLY ENOUGH.</p>
+        <ul class="manifesto-facts">
+          <li><strong>B.TECH</strong> — COMPUTER ENGINEERING, UNIVERSITY OF MUMBAI, ST JOHN COLLEGE, 2022–2026 · CGPA 7.6</li>
+          <li><strong>DIPLOMA</strong> — MECHANICAL ENGINEERING · 80%</li>
+          <li><strong>LANGUAGES</strong> — ENGLISH (ADVANCED) · HINDI (ADVANCED) · MARATHI (NATIVE)</li>
+          <li><strong>CERTS</strong> — AI-POWERED COHORT (WEB DEV) · PYTHON — UDEMY · BLOCKCHAIN BOOTCAMP</li>
         </ul>
         <div class="stats">
-          <div class="stat"><span class="stat-num" data-count="8">0</span><span class="stat-label">web projects</span></div>
-          <div class="stat"><span class="stat-num" data-count="2">0</span><span class="stat-label">live apps</span></div>
-          <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label">hackathon / cert builds</span></div>
+          <div class="stat"><span class="stat-num" data-count="8">8</span><span class="stat-label mono">WEB PROJECTS</span></div>
+          <div class="stat"><span class="stat-num" data-count="2">2</span><span class="stat-label mono">LIVE APPS</span></div>
+          <div class="stat"><span class="stat-num" data-count="3">3</span><span class="stat-label mono">HACKATHON / CERT BUILDS</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ SKILLS ============ -->
-  <section class="section skills" id="skills">
-    <h2 class="section-title reveal">What I <span>build with</span></h2>
-    <p class="section-sub reveal">Honest skills only — everything here is something I've actually used in a project.</p>
-    <div class="skill-groups">
-
-      <div class="skill-card reveal" style="--accent:#7C3AED">
-        <h3>Frontend</h3>
-        <ul class="chips"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>React.js</li><li>SCSS</li><li>Responsive Web Design</li><li>Figma</li></ul>
-        <div class="bar"><span style="--w:92%"></span></div>
-      </div>
-
-      <div class="skill-card reveal" style="--accent:#FF2E88">
-        <h3>Backend</h3>
-        <ul class="chips"><li>PHP</li><li>Node.js</li><li>Express.js</li><li>REST APIs</li><li>JWT</li><li>WebSockets</li></ul>
-        <div class="bar"><span style="--w:88%"></span></div>
-      </div>
-
-      <div class="skill-card reveal" style="--accent:#FF6B1A">
-        <h3>Databases</h3>
-        <ul class="chips"><li>MongoDB</li><li>MySQL</li><li>Pinecone</li></ul>
-        <div class="bar"><span style="--w:84%"></span></div>
-      </div>
-
-      <div class="skill-card reveal" style="--accent:#00E5FF">
-        <h3>Programming</h3>
-        <ul class="chips"><li>JavaScript</li><li>PHP</li><li>Python</li></ul>
-        <div class="bar"><span style="--w:86%"></span></div>
-      </div>
-
-      <div class="skill-card reveal" style="--accent:#C6FF00">
-        <h3>AI &amp; NLP</h3>
-        <ul class="chips"><li>RAG</li><li>LLMs</li><li>Embeddings</li><li>Prompt Engineering</li></ul>
-        <div class="bar"><span style="--w:82%"></span></div>
-      </div>
-
-      <div class="skill-card reveal" style="--accent:#FF2E88">
-        <h3>Tools</h3>
-        <ul class="chips"><li>Git</li><li>GitHub</li><li>Postman</li><li>VS Code</li><li>Render</li></ul>
-        <div class="bar"><span style="--w:90%"></span></div>
-      </div>
-
-      <div class="skill-card skill-card-wide reveal" style="--accent:#7C3AED">
-        <h3>Working knowledge <span class="wk-tag">learning / hands-on</span></h3>
-        <ul class="chips chips-soft"><li>Linux</li><li>Docker</li><li>Jenkins CI/CD</li><li>Bash</li><li>AWS</li><li>Prometheus</li><li>Grafana</li></ul>
-        <p class="wk-note">Used in my DevOps homelab and CI/CD practice — not claimed as core web skills.</p>
-      </div>
-
+  <!-- ============ WORK / SLIDER ============ -->
+  <section class="section work" id="projects">
+    <div class="work-head">
+      <p class="section-kicker mono reveal">EXHIBIT A — H — THE EVIDENCE</p>
+      <h2 class="section-title reveal">SELECTED<br><span>WORK.</span></h2>
+      <p class="section-sub reveal">EIGHT PROJECTS. TWO LIVE RIGHT NOW — OPEN THEM, CLICK AROUND, BREAK THINGS. DRAG, SWIPE OR USE THE ARROWS. CLICK A TILE TO OPEN THE FILE.</p>
     </div>
-  </section>
-
-  <!-- ============ PROJECTS ============ -->
-  <section class="section projects" id="projects">
-    <h2 class="section-title reveal">Selected <span>work</span></h2>
-    <p class="section-sub reveal">Eight projects. Two live right now — open them, click around, break things.</p>
 
     <div class="filters reveal" role="group" aria-label="Filter projects">
-      <button class="filter active" data-filter="all">All</button>
-      <button class="filter" data-filter="fullstack">Full-Stack</button>
-      <button class="filter" data-filter="frontend">Frontend</button>
+      <button class="filter active" data-filter="all">ALL [08]</button>
+      <button class="filter" data-filter="fullstack">FULL-STACK</button>
+      <button class="filter" data-filter="frontend">FRONTEND</button>
       <button class="filter" data-filter="ai">AI</button>
     </div>
 
-    <div class="project-grid" id="projectGrid">
+    <div class="slider" id="slider">
+      <div class="slider-viewport">
+        <div class="slider-track" id="sliderTrack">
 
-      <!-- PaperBull — FEATURED -->
-      <article class="project featured tilt" data-cat="fullstack" style="--g:linear-gradient(135deg,#0B0F14,#10B981 55%,#34D399)">
-        <div class="project-media"><img src="assets/paperbull-preview.png" alt="PaperBull paper-trading app preview" loading="lazy"></div>
-        <div class="project-body">
-          <div class="project-top"><span class="badge-live">● LIVE</span><span class="badge-feat">Featured</span></div>
-          <h3>PaperBull</h3>
-          <p>Paper-trading app — practise trading with virtual money, real market feel. Fastify backend + React/Vite frontend, Postgres, Docker Compose, deployed on Render with its own domain.</p>
-          <ul class="tags"><li>React</li><li>Fastify</li><li>PostgreSQL</li><li>Docker</li><li>Render</li></ul>
-          <div class="project-links">
-            <a class="btn btn-lime btn-small magnetic" href="https://paperbull.online" target="_blank" rel="noopener">Visit live ↗</a>
-            <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/Traders_app" target="_blank" rel="noopener">Repo ↗</a>
-          </div>
+          <article class="project" data-cat="fullstack" data-num="001" data-year="2026" tabindex="0" role="button" aria-label="Open PaperBull details">
+            <div class="project-media"><img src="assets/paperbull-preview.png" alt="PaperBull paper-trading app preview" loading="lazy" draggable="false"><span class="scanlines" aria-hidden="true"></span><span class="badge-live">● LIVE</span></div>
+            <div class="project-body">
+              <p class="project-num mono">001 / 2026 — FULL-STACK</p>
+              <h3>PaperBull</h3>
+              <p class="project-desc">Paper-trading app — practise trading with virtual money, real market feel. Fastify backend + React/Vite frontend, Postgres, Docker Compose, deployed on Render with its own domain.</p>
+              <ul class="tags"><li>React</li><li>Fastify</li><li>PostgreSQL</li><li>Docker</li><li>Render</li></ul>
+              <div class="project-links">
+                <a class="btn btn-red btn-small" href="https://paperbull.online" target="_blank" rel="noopener">VISIT LIVE ↗</a>
+                <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/Traders_app" target="_blank" rel="noopener">REPO ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-cat="ai fullstack" data-num="002" data-year="2026" tabindex="0" role="button" aria-label="Open AsuraGPT details">
+            <div class="project-media project-media-type"><span class="media-big">ASURA<br>GPT</span><span class="media-sub mono">CONVERSATIONAL AI · LONG-TERM MEMORY</span><span class="scanlines" aria-hidden="true"></span><span class="badge-live">● LIVE</span></div>
+            <div class="project-body">
+              <p class="project-num mono">002 / 2026 — AI / FULL-STACK</p>
+              <h3>AsuraGPT</h3>
+              <p class="project-desc">Conversational AI assistant with long-term memory — RAG over Pinecone with embeddings, Node.js/Express backend, MongoDB, real-time chat over WebSockets.</p>
+              <p class="wake-note">Render free tier — may take a moment to wake.</p>
+              <ul class="tags"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Pinecone</li><li>RAG</li><li>WebSockets</li></ul>
+              <div class="project-links">
+                <a class="btn btn-red btn-small" href="https://asuragpt-2.onrender.com" target="_blank" rel="noopener">VISIT LIVE ↗</a>
+                <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/AsuraGPT" target="_blank" rel="noopener">REPO ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-cat="fullstack" data-num="003" data-year="—" tabindex="0" role="button" aria-label="Open Hotel Booking details">
+            <div class="project-media project-media-type"><span class="media-big">HOTEL<br>BOOKING</span><span class="media-sub mono">ROOMS · BOOKINGS · AUTH</span><span class="scanlines" aria-hidden="true"></span></div>
+            <div class="project-body">
+              <p class="project-num mono">003 — FULL-STACK</p>
+              <h3>Hotel Booking Web Application</h3>
+              <p class="project-desc">Full-stack hotel booking app — React frontend, Node/Express + MongoDB backend, JWT auth, REST APIs for users, hotels, rooms and bookings, responsive UI.</p>
+              <ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>JWT</li></ul>
+              <div class="project-links">
+                <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/Hotel_Booking_Web-Frist-Devops-Application-" target="_blank" rel="noopener">REPO ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-cat="fullstack" data-num="004" data-year="2026" tabindex="0" role="button" aria-label="Open Student Task Manager details">
+            <div class="project-media project-media-type"><span class="media-big">TASK<br>MANAGER</span><span class="media-sub mono">DOCKER · JENKINS CI/CD</span><span class="scanlines" aria-hidden="true"></span></div>
+            <div class="project-body">
+              <p class="project-num mono">004 / 2026 — FULL-STACK</p>
+              <h3>Student Task Manager</h3>
+              <p class="project-desc">Full-stack task manager with Docker builds and pushes for backend + frontend images, driven by a Jenkins declarative CI/CD pipeline.</p>
+              <ul class="tags"><li>Node.js</li><li>Docker</li><li>Jenkins</li><li>CI/CD</li></ul>
+              <div class="project-links">
+                <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/student_task_manager_devpro" target="_blank" rel="noopener">REPO ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-cat="frontend" data-num="005" data-year="2026" tabindex="0" role="button" aria-label="Open EkSudhaar details">
+            <div class="project-media project-media-type"><span class="media-big">EK<br>SUDHAAR</span><span class="media-sub mono">CIVIC TECH · CODE FOR INDIA</span><span class="scanlines" aria-hidden="true"></span></div>
+            <div class="project-body">
+              <p class="project-num mono">005 / 2026 — FRONTEND</p>
+              <h3>EkSudhaar</h3>
+              <p class="project-desc">Civic-tech tool for the Code for India hackathon — a free pre-filing simulator that scores identity-correction applications 0–100% against a 28-rule knowledge base, before anyone pays a form-fill fee.</p>
+              <ul class="tags"><li>JavaScript</li><li>Hackathon</li><li>Civic Tech</li></ul>
+              <div class="project-links">
+                <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/eksudhaar" target="_blank" rel="noopener">REPO ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-cat="ai fullstack" data-num="006" data-year="2026" tabindex="0" role="button" aria-label="Open AIVOA RCA details">
+            <div class="project-media project-media-type"><span class="media-big">AIVOA<br>RCA</span><span class="media-sub mono">PHARMA · ROOT CAUSE ANALYSIS</span><span class="scanlines" aria-hidden="true"></span></div>
+            <div class="project-body">
+              <p class="project-num mono">006 / 2026 — AI / FULL-STACK</p>
+              <h3>AIVOA RCA Module</h3>
+              <p class="project-desc">AI Root Cause Analysis module for pharma API manufacturing — React + TypeScript frontend, FastAPI backend, deviation intake, Ishikawa + 5 Whys analysis, CAPA recommendations.</p>
+              <ul class="tags"><li>React</li><li>TypeScript</li><li>FastAPI</li><li>AI</li></ul>
+              <div class="project-links">
+                <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/aivoa-rca-module" target="_blank" rel="noopener">REPO ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-cat="fullstack" data-num="007" data-year="—" tabindex="0" role="button" aria-label="Open Carpooling details">
+            <div class="project-media project-media-type"><span class="media-big">CAR<br>POOLING</span><span class="media-sub mono">RIDE-SHARING PLATFORM</span><span class="scanlines" aria-hidden="true"></span></div>
+            <div class="project-body">
+              <p class="project-num mono">007 — FULL-STACK</p>
+              <h3>Carpooling Website</h3>
+              <p class="project-desc">Ride-sharing platform — HTML/CSS/JavaScript frontend with an Express.js + MongoDB backend for rides, users and bookings.</p>
+              <ul class="tags"><li>HTML/CSS/JS</li><li>Express.js</li><li>MongoDB</li></ul>
+              <div class="project-links"></div>
+            </div>
+          </article>
+
+          <article class="project" data-cat="ai frontend" data-num="008" data-year="—" tabindex="0" role="button" aria-label="Open PromptVault details">
+            <div class="project-media project-media-type"><span class="media-big">PROMPT<br>VAULT</span><span class="media-sub mono">PROMPT MANAGEMENT</span><span class="scanlines" aria-hidden="true"></span></div>
+            <div class="project-body">
+              <p class="project-num mono">008 — AI / FRONTEND</p>
+              <h3>PromptVault</h3>
+              <p class="project-desc">AI-powered prompt management app for storing, organising and reusing prompts — built to make everyday LLM work faster.</p>
+              <ul class="tags"><li>JavaScript</li><li>AI</li><li>Prompt Engineering</li></ul>
+              <div class="project-links"></div>
+            </div>
+          </article>
+
         </div>
-      </article>
-
-      <!-- AsuraGPT — FEATURED -->
-      <article class="project featured tilt" data-cat="ai fullstack" style="--g:linear-gradient(135deg,#7C3AED,#FF2E88)">
-        <div class="project-media project-media-gradient"><span class="media-big">AsuraGPT</span><span class="media-sub">Conversational AI · long-term memory</span></div>
-        <div class="project-body">
-          <div class="project-top"><span class="badge-live">● LIVE</span><span class="badge-feat">Featured</span></div>
-          <h3>AsuraGPT</h3>
-          <p>Conversational AI assistant with long-term memory — RAG over Pinecone with embeddings, Node.js/Express backend, MongoDB, real-time chat over WebSockets.</p>
-          <p class="wake-note">Render free tier — may take a moment to wake.</p>
-          <ul class="tags"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Pinecone</li><li>RAG</li><li>WebSockets</li></ul>
-          <div class="project-links">
-            <a class="btn btn-lime btn-small magnetic" href="https://asuragpt-2.onrender.com" target="_blank" rel="noopener">Visit live ↗</a>
-            <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/AsuraGPT" target="_blank" rel="noopener">Repo ↗</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Hotel Booking -->
-      <article class="project tilt" data-cat="fullstack" style="--g:linear-gradient(135deg,#FF6B1A,#FF2E88)">
-        <div class="project-media project-media-gradient"><span class="media-big">Hotel Booking</span><span class="media-sub">Rooms · bookings · auth</span></div>
-        <div class="project-body">
-          <h3>Hotel Booking Web Application</h3>
-          <p>Full-stack hotel booking app — React frontend, Node/Express + MongoDB backend, JWT auth, REST APIs for users, hotels, rooms and bookings, responsive UI.</p>
-          <ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>JWT</li></ul>
-          <div class="project-links">
-            <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/Hotel_Booking_Web-Frist-Devops-Application-" target="_blank" rel="noopener">Repo ↗</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Student Task Manager -->
-      <article class="project tilt" data-cat="fullstack" style="--g:linear-gradient(135deg,#00E5FF,#7C3AED)">
-        <div class="project-media project-media-gradient"><span class="media-big">Task Manager</span><span class="media-sub">Docker · Jenkins CI/CD</span></div>
-        <div class="project-body">
-          <h3>Student Task Manager</h3>
-          <p>Full-stack task manager with Docker builds and pushes for backend + frontend images, driven by a Jenkins declarative CI/CD pipeline.</p>
-          <ul class="tags"><li>Node.js</li><li>Docker</li><li>Jenkins</li><li>CI/CD</li></ul>
-          <div class="project-links">
-            <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/student_task_manager_devpro" target="_blank" rel="noopener">Repo ↗</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- EkSudhaar -->
-      <article class="project tilt" data-cat="frontend" style="--g:linear-gradient(135deg,#C6FF00,#00E5FF)">
-        <div class="project-media project-media-gradient"><span class="media-big">EkSudhaar</span><span class="media-sub">Civic tech · Code for India</span></div>
-        <div class="project-body">
-          <h3>EkSudhaar</h3>
-          <p>Civic-tech tool for the Code for India hackathon — a free pre-filing simulator that scores identity-correction applications 0–100% against a 28-rule knowledge base, before anyone pays a form-fill fee.</p>
-          <ul class="tags"><li>JavaScript</li><li>Hackathon</li><li>Civic Tech</li></ul>
-          <div class="project-links">
-            <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/eksudhaar" target="_blank" rel="noopener">Repo ↗</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- AIVOA RCA -->
-      <article class="project tilt" data-cat="ai fullstack" style="--g:linear-gradient(135deg,#FF2E88,#7C3AED)">
-        <div class="project-media project-media-gradient"><span class="media-big">AIVOA RCA</span><span class="media-sub">Pharma · root cause analysis</span></div>
-        <div class="project-body">
-          <h3>AIVOA RCA Module</h3>
-          <p>AI Root Cause Analysis module for pharma API manufacturing — React + TypeScript frontend, FastAPI backend, deviation intake, Ishikawa + 5 Whys analysis, CAPA recommendations.</p>
-          <ul class="tags"><li>React</li><li>TypeScript</li><li>FastAPI</li><li>AI</li></ul>
-          <div class="project-links">
-            <a class="btn btn-ghost btn-small" href="https://github.com/ChetanSawale/aivoa-rca-module" target="_blank" rel="noopener">Repo ↗</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Carpooling -->
-      <article class="project tilt" data-cat="fullstack" style="--g:linear-gradient(135deg,#FF6B1A,#C6FF00)">
-        <div class="project-media project-media-gradient"><span class="media-big">Carpooling</span><span class="media-sub">Ride-sharing platform</span></div>
-        <div class="project-body">
-          <h3>Carpooling Website</h3>
-          <p>Ride-sharing platform — HTML/CSS/JavaScript frontend with an Express.js + MongoDB backend for rides, users and bookings.</p>
-          <ul class="tags"><li>HTML/CSS/JS</li><li>Express.js</li><li>MongoDB</li></ul>
-        </div>
-      </article>
-
-      <!-- PromptVault -->
-      <article class="project tilt" data-cat="ai frontend" style="--g:linear-gradient(135deg,#00E5FF,#C6FF00)">
-        <div class="project-media project-media-gradient"><span class="media-big">PromptVault</span><span class="media-sub">Prompt management</span></div>
-        <div class="project-body">
-          <h3>PromptVault</h3>
-          <p>AI-powered prompt management app for storing, organising and reusing prompts — built to make everyday LLM work faster.</p>
-          <ul class="tags"><li>JavaScript</li><li>AI</li><li>Prompt Engineering</li></ul>
-        </div>
-      </article>
-
+      </div>
+      <div class="slider-controls">
+        <button class="slider-arrow" id="prevBtn" aria-label="Previous project">← PREV</button>
+        <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Project pages"></div>
+        <button class="slider-arrow" id="nextBtn" aria-label="Next project">NEXT →</button>
+      </div>
+      <p class="slider-hint mono" id="sliderHint">DRAG / SWIPE / ← → KEYS — CLICK A TILE TO OPEN THE FILE</p>
     </div>
-    <p class="more-note reveal">More on GitHub — <a href="https://github.com/ChetanSawale" target="_blank" rel="noopener">github.com/ChetanSawale ↗</a></p>
+    <p class="more-note reveal">MORE ON GITHUB — <a href="https://github.com/ChetanSawale" target="_blank" rel="noopener">GITHUB.COM/CHETANSAWALE ↗</a></p>
+    <div class="work-bgnum" aria-hidden="true">WORK</div>
   </section>
 
-  <!-- ============ EXPERIENCE ============ -->
-  <section class="section experience" id="experience">
-    <h2 class="section-title reveal">The <span>journey</span></h2>
+  <!-- ============ DOSSIER / SKILLS ============ -->
+  <section class="section dossier" id="skills">
+    <p class="section-kicker mono reveal">DOSSIER — WHAT HE BUILDS WITH</p>
+    <h2 class="section-title reveal">HONEST SKILLS<br><span>ONLY.</span></h2>
+    <p class="section-sub reveal">EVERYTHING HERE IS SOMETHING I'VE ACTUALLY USED IN A PROJECT. NOTHING INVENTED.</p>
+    <div class="skill-list">
+      <div class="skill-row reveal"><span class="skill-index mono">01</span><h3>FRONTEND</h3><ul class="chips"><li>HTML5</li><li>CSS3</li><li>JAVASCRIPT</li><li>REACT.JS</li><li>SCSS</li><li>RESPONSIVE WEB DESIGN</li><li>FIGMA</li></ul><div class="bar"><span style="--w:92%"></span></div></div>
+      <div class="skill-row reveal"><span class="skill-index mono">02</span><h3>BACKEND</h3><ul class="chips"><li>PHP</li><li>NODE.JS</li><li>EXPRESS.JS</li><li>REST APIS</li><li>JWT</li><li>WEBSOCKETS</li></ul><div class="bar"><span style="--w:88%"></span></div></div>
+      <div class="skill-row reveal"><span class="skill-index mono">03</span><h3>DATABASES</h3><ul class="chips"><li>MONGODB</li><li>MYSQL</li><li>PINECONE</li></ul><div class="bar"><span style="--w:84%"></span></div></div>
+      <div class="skill-row reveal"><span class="skill-index mono">04</span><h3>PROGRAMMING</h3><ul class="chips"><li>JAVASCRIPT</li><li>PHP</li><li>PYTHON</li></ul><div class="bar"><span style="--w:86%"></span></div></div>
+      <div class="skill-row reveal"><span class="skill-index mono">05</span><h3>AI &amp; NLP</h3><ul class="chips"><li>RAG</li><li>LLMS</li><li>EMBEDDINGS</li><li>PROMPT ENGINEERING</li></ul><div class="bar"><span style="--w:82%"></span></div></div>
+      <div class="skill-row reveal"><span class="skill-index mono">06</span><h3>TOOLS</h3><ul class="chips"><li>GIT</li><li>GITHUB</li><li>POSTMAN</li><li>VS CODE</li><li>RENDER</li></ul><div class="bar"><span style="--w:90%"></span></div></div>
+      <div class="skill-row skill-row-wide reveal"><span class="skill-index mono">07</span><h3>WORKING KNOWLEDGE <span class="wk-tag mono">LEARNING / HANDS-ON</span></h3><ul class="chips chips-soft"><li>LINUX</li><li>DOCKER</li><li>JENKINS CI/CD</li><li>BASH</li><li>AWS</li><li>PROMETHEUS</li><li>GRAFANA</li></ul><p class="wk-note">USED IN MY DEVOPS HOMELAB AND CI/CD PRACTICE — NOT CLAIMED AS CORE WEB SKILLS.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ JOURNEY ============ -->
+  <section class="section journey" id="experience">
+    <p class="section-kicker mono reveal">FILE 002 — THE JOURNEY</p>
+    <h2 class="section-title reveal">THE<br><span>JOURNEY.</span></h2>
     <div class="timeline">
-      <div class="tl-item reveal">
-        <span class="tl-dot" style="--c:#FF2E88"></span>
-        <div class="tl-card">
-          <span class="tl-date">May 2026 — Present</span>
-          <h3>Reports Executive — Hitachi Cash Management Services</h3>
-          <p>Cleaning, validating and reporting transaction data in Excel; building Power BI dashboards that show the performance of the locations I handle.</p>
-        </div>
-      </div>
-      <div class="tl-item reveal">
-        <span class="tl-dot" style="--c:#C6FF00"></span>
-        <div class="tl-card">
-          <span class="tl-date">2026</span>
-          <h3>Hackathons — Code for India · Amazon 'Build, Ship, Shape'</h3>
-          <p>EkSudhaar (Code for India 'Code for a Billion') and the DevOps MCP server for Amazon's 'Build, Ship, Shape' hackathon — building real, working products under deadline.</p>
-        </div>
-      </div>
-      <div class="tl-item reveal">
-        <span class="tl-dot" style="--c:#00E5FF"></span>
-        <div class="tl-card">
-          <span class="tl-date">May 2022 — May 2026</span>
-          <h3>B.Tech, Computer Engineering — University of Mumbai</h3>
-          <p>St John College of Engineering and Management · CGPA 7.6. Diploma in Mechanical Engineering — 80%.</p>
-        </div>
-      </div>
+      <div class="tl-item reveal"><span class="tl-date mono">MAY 2026 — PRESENT</span><div class="tl-card"><h3>REPORTS EXECUTIVE — HITACHI CASH MANAGEMENT SERVICES</h3><p>Cleaning, validating and reporting transaction data in Excel; building Power BI dashboards that show the performance of the locations I handle.</p></div></div>
+      <div class="tl-item reveal"><span class="tl-date mono">2026</span><div class="tl-card"><h3>HACKATHONS — CODE FOR INDIA · AMAZON 'BUILD, SHIP, SHAPE'</h3><p>EkSudhaar (Code for India 'Code for a Billion') and the DevOps MCP server for Amazon's 'Build, Ship, Shape' hackathon — building real, working products under deadline.</p></div></div>
+      <div class="tl-item reveal"><span class="tl-date mono">MAY 2022 — MAY 2026</span><div class="tl-card"><h3>B.TECH, COMPUTER ENGINEERING — UNIVERSITY OF MUMBAI</h3><p>St John College of Engineering and Management · CGPA 7.6. Diploma in Mechanical Engineering — 80%.</p></div></div>
     </div>
   </section>
 
-  <!-- ============ CONTACT ============ -->
+  <!-- ============ CONTACT / RED FOOTER ============ -->
   <section class="section contact" id="contact">
-    <h2 class="contact-title reveal">Let's build<br><span>something real.</span></h2>
-    <p class="section-sub reveal">Hiring for a web developer role? My inbox is open — and my code is already live.</p>
-    <a class="big-email magnetic reveal" href="mailto:sawalechetan102@gmail.com">sawalechetan102@gmail.com</a>
+    <p class="section-kicker mono reveal">FILE 003 — LAST PAGE. YES, REALLY — CONTACT ME.</p>
+    <h2 class="contact-title reveal">LET'S BUILD<br><span>SOMETHING REAL.</span></h2>
+    <p class="section-sub reveal">HIRING FOR A WEB DEVELOPER ROLE? MY INBOX IS OPEN — AND MY CODE IS ALREADY LIVE. NO GATEKEEPING. JUST WRITE.</p>
+    <a class="big-email reveal" href="mailto:sawalechetan102@gmail.com">SAWALEChetan102@GMAIL.COM</a>
     <div class="contact-grid reveal">
       <div class="contact-info">
-        <p><strong>Phone</strong><br><a href="tel:+919699486717">+91 96994 86717</a></p>
-        <p><strong>Location</strong><br>Mumbai, India — open to relocation across India</p>
-        <p><strong>Elsewhere</strong><br>
-          <a href="https://github.com/ChetanSawale" target="_blank" rel="noopener">GitHub ↗</a> ·
-          <a href="https://www.linkedin.com/in/chetan-sawale-0a3917321" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <p><strong>PHONE</strong><br><a href="tel:+919699486717">+91 96994 86717</a></p>
+        <p><strong>LOCATION</strong><br>MUMBAI, INDIA — OPEN TO RELOCATION ACROSS INDIA</p>
+        <p><strong>ELSEWHERE</strong><br>
+          <a href="https://github.com/ChetanSawale" target="_blank" rel="noopener">GITHUB ↗</a> ·
+          <a href="https://www.linkedin.com/in/chetan-sawale-0a3917321" target="_blank" rel="noopener">LINKEDIN ↗</a>
         </p>
-        <a class="btn btn-lime magnetic" href="assets/Chetan-Sawale-Web-Developer-Resume.pdf" download>Download resume ↓</a>
-        <div class="lottie-wrap" id="lottieWrap" aria-hidden="true"></div>
+        <a class="btn btn-black" href="assets/Chetan-Sawale-Web-Developer-Resume.pdf" download>DOWNLOAD RESUME ↓</a>
       </div>
       <form class="contact-form" id="contactForm">
-        <label>Your name<input type="text" id="cfName" required placeholder="Jane Recruiter"></label>
-        <label>Your email<input type="email" id="cfEmail" required placeholder="jane@company.com"></label>
-        <label>Message<textarea id="cfMsg" rows="4" required placeholder="Hi Chetan, we'd like to talk about a web developer role…"></textarea></label>
-        <button class="btn btn-pink magnetic" type="submit">Send via email →</button>
-        <p class="form-note">Opens your email app — no data is stored anywhere.</p>
+        <label>YOUR NAME<input type="text" id="cfName" required placeholder="Jane Recruiter"></label>
+        <label>YOUR EMAIL<input type="email" id="cfEmail" required placeholder="jane@company.com"></label>
+        <label>MESSAGE<textarea id="cfMsg" rows="4" required placeholder="Hi Chetan, we'd like to talk about a web developer role…"></textarea></label>
+        <button class="btn btn-black" type="submit">SEND VIA EMAIL →</button>
+        <p class="form-note">OPENS YOUR EMAIL APP — NO DATA IS STORED ANYWHERE.</p>
       </form>
     </div>
   </section>
@@ -350,16 +314,30 @@
 </main>
 
 <footer class="footer">
-  <p>© 2026 Chetan Sawale · Built with HTML, CSS &amp; JavaScript — GSAP, Three.js &amp; Lenis, no build step.</p>
-  <p class="footer-sub">Mumbai, India · <a href="#top">Back to top ↑</a></p>
+  <p>© 2026 CHETAN SAWALE · BUILT WITH HTML, CSS &amp; JAVASCRIPT — GSAP, THREE.JS &amp; LENIS, NO BUILD STEP.</p>
+  <p class="footer-sub">MUMBAI, INDIA · MADE LOUD ON PURPOSE · <a href="#top">BACK TO TOP ↑</a></p>
 </footer>
+
+<!-- Lightbox overlay -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbTitle" hidden>
+  <div class="lightbox-backdrop" id="lbBackdrop"></div>
+  <div class="lightbox-panel">
+    <button class="lightbox-close" id="lbClose" aria-label="Close">✕ CLOSE</button>
+    <p class="lightbox-num mono" id="lbNum">001 / 2026</p>
+    <div class="lightbox-media" id="lbMedia"></div>
+    <h3 id="lbTitle"></h3>
+    <p id="lbDesc"></p>
+    <p class="wake-note" id="lbWake" hidden>RENDER FREE TIER — MAY TAKE A MOMENT TO WAKE.</p>
+    <ul class="tags" id="lbTags"></ul>
+    <div class="lightbox-links" id="lbLinks"></div>
+  </div>
+</div>
 
 <!-- Animation libraries (CDN, all optional — the site works fully without them) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
