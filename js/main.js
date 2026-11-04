@@ -92,6 +92,12 @@
     counters.forEach(function (el) { cio.observe(el); });
   } else { counters.forEach(animateCounter); }
 
+  /* ---------- Input modality: mouse vs keyboard (focus outline) ----------
+     A mouse click must not leave a stuck red focus border on a tile;
+     :focus-visible styling is for keyboard users only. */
+  document.addEventListener('pointerdown', function () { document.documentElement.classList.add('using-mouse'); }, true);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Tab') document.documentElement.classList.remove('using-mouse'); }, true);
+
   /* ---------- Project slider + filters + lightbox ---------- */
   var track = document.getElementById('sliderTrack');
   var viewport = document.querySelector('.slider-viewport');
@@ -151,41 +157,81 @@
     forceVisible(); // filtered tiles must show immediately, fully visible
   }
   function goTo(n) { index = Math.max(0, Math.min(maxIndex(), n)); applyTransform(true); }
-  if (prevBtn) prevBtn.addEventListener('click', function () { goTo(index - 1); });
-  if (nextBtn) nextBtn.addEventListener('click', function () { goTo(index + 1); });
+  // NEXT/PREV: re-measure layout first. The initial rebuild can run before
+  // layout/fonts settle, leaving perView/maxIndex (and Next's disabled
+  // state) stale — the first Next click then clamped to index 0 and did
+  // nothing, until a later resize/rebuild corrected it.
+  if (prevBtn) prevBtn.addEventListener('click', function () { rebuildSlider(); goTo(index - 1); });
+  if (nextBtn) nextBtn.addEventListener('click', function () { rebuildSlider(); goTo(index + 1); });
   document.addEventListener('keydown', function (e) {
     if (document.getElementById('lightbox') && !document.getElementById('lightbox').hidden) return;
     if (e.key === 'ArrowLeft') goTo(index - 1);
     if (e.key === 'ArrowRight') goTo(index + 1);
   });
 
-  // Drag / swipe (pointer events; click on a tile still opens the lightbox)
+  // Drag / swipe (pointer events).
+  // BUG FIX: the old code called viewport.setPointerCapture() on EVERY
+  // pointerdown. Pointer capture retargets all later events for that
+  // pointer — including the click — to the viewport, so a tile's click
+  // listener never fired (the tile only got focus: the red border).
+  // Capture is now set ONLY once a real drag has started (>6px, mostly
+  // horizontal), and a plain click (no movement) is never captured and
+  // never suppressed.
+  var dragStartY = 0, dragPointerId = null, suppressClick = false;
   if (viewport && track) {
     viewport.classList.add('js-slider');
     viewport.style.overflow = 'hidden';
     viewport.addEventListener('pointerdown', function (e) {
-      dragging = true; dragMoved = false; dragStartX = e.clientX; dragStartIndex = index;
+      if (e.button !== undefined && e.button !== 0) return; // primary button / touch only
+      dragStartX = e.clientX; dragStartY = e.clientY;
+      dragStartIndex = index; dragPointerId = e.pointerId;
+      dragging = true; dragMoved = false; suppressClick = false;
       track.classList.remove('animated');
-      viewport.setPointerCapture(e.pointerId);
+      // Deliberately NO setPointerCapture here — see the note above.
     });
     viewport.addEventListener('pointermove', function (e) {
-      if (!dragging) return;
-      var dx = e.clientX - dragStartX;
-      if (Math.abs(dx) > 6) dragMoved = true;
+      if (!dragging || (dragPointerId !== null && e.pointerId !== dragPointerId)) return;
+      var dx = e.clientX - dragStartX, dy = e.clientY - dragStartY;
+      if (!dragMoved) {
+        if (Math.abs(dx) > 6 && Math.abs(dx) >= Math.abs(dy)) {
+          dragMoved = true;
+          viewport.classList.add('dragging');
+          try { viewport.setPointerCapture(e.pointerId); } catch (err) { /* no capture: drag still works */ }
+        } else if (Math.abs(dy) > 10 && Math.abs(dy) > Math.abs(dx)) {
+          dragging = false; return; // vertical gesture: let the page scroll, not a drag
+        } else return; // jitter under the 6px threshold: do not move the track
+      }
       track.style.transform = 'translateX(' + (-dragStartIndex * tileStep() + dx) + 'px)';
     });
     function endDrag(e) {
-      if (!dragging) return; dragging = false;
+      if (!dragging) return;
+      dragging = false;
+      viewport.classList.remove('dragging');
       var dx = e.clientX - dragStartX;
-      if (dx < -60) goTo(dragStartIndex + 1);
-      else if (dx > 60) goTo(dragStartIndex - 1);
-      else applyTransform(true);
+      if (dragMoved) {
+        // A real drag: swallow the click that follows pointerup.
+        suppressClick = true;
+        setTimeout(function () { suppressClick = false; }, 150);
+        if (dx < -60) goTo(dragStartIndex + 1);
+        else if (dx > 60) goTo(dragStartIndex - 1);
+        else applyTransform(true);
+      } else {
+        applyTransform(true); // plain click: snap back; the click itself opens the tile
+      }
+      dragMoved = false;
     }
     viewport.addEventListener('pointerup', endDrag);
-    viewport.addEventListener('pointercancel', function () { dragging = false; applyTransform(true); });
-    // A drag must not open the lightbox: swallow the click after a drag
+    viewport.addEventListener('pointercancel', function () {
+      if (!dragging && !dragMoved) return;
+      dragging = false; dragMoved = false; suppressClick = false;
+      viewport.classList.remove('dragging');
+      applyTransform(true);
+    });
+    // Swallow the click only after a genuine drag. Capture phase runs
+    // before the tile's bubble-phase click listener, so a drag can never
+    // open the lightbox — and a plain click is never swallowed.
     track.addEventListener('click', function (e) {
-      if (dragMoved) { e.stopPropagation(); e.preventDefault(); dragMoved = false; }
+      if (suppressClick) { e.stopPropagation(); e.preventDefault(); suppressClick = false; }
     }, true);
     window.addEventListener('resize', function () { rebuildSlider(); });
   }
@@ -211,9 +257,11 @@
   var lbWake = document.getElementById('lbWake'), lbTags = document.getElementById('lbTags');
   var lbLinks = document.getElementById('lbLinks');
   var lastFocus = null;
-  function openLightbox(card) {
+  function openLightbox(card, viaMouse) {
     if (!lightbox) return;
-    lastFocus = document.activeElement;
+    // Mouse-opened: do not restore focus to the tile on close (that is
+    // what left the stuck red outline); keyboard-opened: restore it.
+    lastFocus = viaMouse ? null : document.activeElement;
     var num = card.getAttribute('data-num') || '';
     var year = card.getAttribute('data-year') || '';
     lbNum.textContent = num + (year && year !== '—' ? ' / ' + year : '');
@@ -261,6 +309,7 @@
     lightbox.hidden = false;
     document.body.style.overflow = 'hidden';
     var close = document.getElementById('lbClose'); if (close) close.focus();
+    if (viaMouse && card.blur) card.blur(); // no stuck red focus outline on the tile
   }
   function closeLightbox() {
     if (!lightbox || lightbox.hidden) return;
@@ -271,11 +320,12 @@
   if (track) {
     track.querySelectorAll('.project').forEach(function (card) {
       card.addEventListener('click', function (e) {
+        if (suppressClick) return; // click that followed a real drag
         if (e.target.closest('a')) return; // link clicks go to the link, not the lightbox
-        openLightbox(card);
+        openLightbox(card, true); // mouse/touch click: blur the tile, no focus restore
       });
       card.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(card); }
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(card, false); }
       });
     });
   }
@@ -314,9 +364,15 @@
   });
 
   rebuildSlider();
+  // First-Next-click fix (see the Next/Prev handlers above): re-measure
+  // once layout is final, so perView/maxIndex and Next's disabled state
+  // are never left stale from the pre-load measurement.
+  window.addEventListener('load', function () { rebuildSlider(); });
+  setTimeout(rebuildSlider, 400);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { rebuildSlider(); });
 
   /* Anchor jump safety: after any jump to #projects, force everything visible */
-  window.addEventListener('hashchange', function () { setTimeout(forceVisible, 60); });
+  window.addEventListener('hashchange', function () { setTimeout(function () { forceVisible(); rebuildSlider(); }, 60); });
 })();
 
 /* ============================================================================
