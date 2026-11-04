@@ -355,12 +355,26 @@
   var form = document.getElementById('contactForm');
   if (form) form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var name = document.getElementById('cfName').value.trim();
-    var email = document.getElementById('cfEmail').value.trim();
-    var msg = document.getElementById('cfMsg').value.trim();
-    var subject = encodeURIComponent('Portfolio enquiry from ' + name);
-    var body = encodeURIComponent('Hi Chetan,\n\n' + msg + '\n\n— ' + name + ' (' + email + ')');
-    window.location.href = 'mailto:sawalechetan102@gmail.com?subject=' + subject + '&body=' + body;
+    var btn = document.getElementById('cfSubmit');
+    var note = document.getElementById('cfNote');
+    btn.disabled = true;
+    btn.textContent = 'SENDING...';
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (r) {
+      if (!r.ok) throw new Error('send failed');
+      return r.json();
+    }).then(function () {
+      btn.textContent = 'MESSAGE SENT';
+      note.textContent = 'THANKS — YOUR MESSAGE IS ON ITS WAY TO MY INBOX.';
+      form.reset();
+    }).catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'SEND MESSAGE \u2192';
+      note.textContent = 'COULD NOT SEND — PLEASE EMAIL ME DIRECTLY AT SAWALECHETAN102@GMAIL.COM.';
+    });
   });
 
   rebuildSlider();

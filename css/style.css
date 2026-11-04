@@ -212,6 +212,10 @@ button{font-family:inherit}
 .contact-info p strong{color:var(--ink)}
 .contact-info a{color:var(--ink); text-decoration:none; font-weight:700}
 .contact-info a:hover{color:#fff}
+/* The resume button is a black button: its off-white text must win over the
+   black link colour above (same specificity, so this later rule wins). */
+.contact-info a.btn-black{color:var(--paper); background:var(--ink)}
+.contact-info a.btn-black:hover{color:var(--ink); background:#fff}
 .contact-form{display:flex; flex-direction:column; gap:14px}
 .contact-form label{font-weight:700; font-size:.9rem; color:var(--ink); display:block; text-transform:uppercase; letter-spacing:.05em}
 .contact-form input,.contact-form textarea{width:100%; margin-top:6px; padding:13px 16px; border:2px solid var(--ink); background:#fff; color:var(--ink); font-family:var(--font-body); font-size:1rem; outline:none; border-radius:0}

@@ -301,12 +301,15 @@
         </p>
         <a class="btn btn-black" href="assets/Chetan-Sawale-Web-Developer-Resume.pdf" download>DOWNLOAD RESUME ↓</a>
       </div>
-      <form class="contact-form" id="contactForm">
-        <label>YOUR NAME<input type="text" id="cfName" required placeholder="Jane Recruiter"></label>
-        <label>YOUR EMAIL<input type="email" id="cfEmail" required placeholder="jane@company.com"></label>
-        <label>MESSAGE<textarea id="cfMsg" rows="4" required placeholder="Hi Chetan, we'd like to talk about a web developer role…"></textarea></label>
-        <button class="btn btn-black" type="submit">SEND VIA EMAIL →</button>
-        <p class="form-note">OPENS YOUR EMAIL APP — NO DATA IS STORED ANYWHERE.</p>
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/sawalechetan102@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New message from your portfolio">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <label>YOUR NAME<input type="text" name="name" id="cfName" required placeholder="Jane Recruiter"></label>
+        <label>YOUR EMAIL<input type="email" name="email" id="cfEmail" required placeholder="jane@company.com"></label>
+        <label>MESSAGE<textarea name="message" id="cfMsg" rows="4" required placeholder="Hi Chetan, we'd like to talk about a web developer role…"></textarea></label>
+        <button class="btn btn-black" type="submit" id="cfSubmit">SEND MESSAGE →</button>
+        <p class="form-note" id="cfNote">SENT STRAIGHT TO MY INBOX — NO EMAIL APP NEEDED.</p>
       </form>
     </div>
   </section>
