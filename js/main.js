@@ -351,7 +351,7 @@
     });
   }
 
-  /* ---------- Contact form -> mailto (no backend) ---------- */
+  /* ---------- Contact form -> Web3Forms ---------- */
   var form = document.getElementById('contactForm');
   if (form) form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -364,9 +364,9 @@
       body: new FormData(form),
       headers: { 'Accept': 'application/json' }
     }).then(function (r) {
-      if (!r.ok) throw new Error('send failed');
       return r.json();
-    }).then(function () {
+    }).then(function (data) {
+      if (!data || !data.success) throw new Error('send failed');
       btn.textContent = 'MESSAGE SENT';
       note.textContent = 'THANKS — YOUR MESSAGE IS ON ITS WAY TO MY INBOX.';
       form.reset();
